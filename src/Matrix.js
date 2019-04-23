@@ -7,6 +7,19 @@ export default class Matrix extends Component {
 
   constructor() {
     super()
+    this.state = {
+      selectedColor: '#fff'
+    }
+  }
+
+  setColorHandler = (hex) => {
+    this.setState({
+      selectedColor: hex
+    })
+  }
+
+  getCurrentColor = () => {
+    this.state.selectedColor
   }
 
   genRow = (vals) => (
@@ -31,6 +44,6 @@ export default class Matrix extends Component {
 
 }
 
-Matrix.defaultProps = {
-  values: chromeBoi
-}
+// Matrix.defaultProps = {
+//   values: chromeBoi
+// }
